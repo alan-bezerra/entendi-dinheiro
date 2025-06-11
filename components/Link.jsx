@@ -3,14 +3,18 @@ function Link(props) {
     event.preventDefault();
     event.stopPropagation();
 
-    window.navigate(props.href);
+    if (props.onClick) {
+      props.onClick(event);
+    }
+
+    navigate(props.href);
   }
 
   return (
     <a 
       href={props.href} 
-      onClick={handleClick}
       {...props}
+      onClick={handleClick}
     >
       {props.children}
     </a>

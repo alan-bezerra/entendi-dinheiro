@@ -59,6 +59,7 @@ function Sidebar() {
             <Link 
               className={`sidebar__nav__link ${currentPath === "/" ? "sidebar__nav__link--active" : ""}`}
               href="/" 
+              onClick={handleSidebarToggle}
             >
               {currentPath === "/" ? (
                 <i className="ph-fill nav__link__icon ph-house"></i> 
@@ -102,6 +103,7 @@ function Sidebar() {
             <Link 
               className={`sidebar__nav__link ${currentPath === "/catalogo" ? "sidebar__nav__link--active" : ""}`}
               href="/catalogo" 
+              onClick={handleSidebarToggle}
             >
               {currentPath === "/catalogo" ? (
                 <i className="ph-fill nav__link__icon ph-book-open"></i> 
