@@ -1,7 +1,11 @@
 function DashboardPage() {
   return (
-    <div>
-      Dashboard
+    <div className="app-container">
+      <HeaderPrincipal />
+
+      <main>
+        <div>Dashboard</div>
+      </main>
     </div>
   )
 }

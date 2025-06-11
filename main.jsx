@@ -20,15 +20,7 @@ function App() {
   }, []);
 
   const currentPage = renderCurrentPage();
-  return (
-    <div className="app-container">
-      <HeaderPrincipal />
-
-      <main>
-        {currentPage}
-      </main>
-    </div>
-  );
+  return currentPage;
 }
 
 ReactDOM.createRoot(document.getElementById('app')).render(<App />);
