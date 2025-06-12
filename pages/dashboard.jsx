@@ -6,7 +6,7 @@ function DashboardPage() {
     <div className="app-container">
       <HeaderPrincipal />
 
-      <main className="container-dashboard">
+      <main className="container-dashboard container">
         <header class="profile">
           <h1>Olá, Ana!</h1>
           <p>Pronto para continuar seus estudos de educação financeira?</p>

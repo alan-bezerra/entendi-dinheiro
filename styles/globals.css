@@ -653,7 +653,7 @@ body {
 /* dashbord */
 
 .container-dashboard {
-  max-width: 650px;
+  /* max-width: 650px; */
   margin: auto;
   margin-top: 24px;
   padding: 20px;
