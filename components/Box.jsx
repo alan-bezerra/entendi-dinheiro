@@ -6,7 +6,7 @@ function Box({ size, variant, ...props }) {
   const classVariant = variant ? `box-${variant}` : '';
 
   return (
-    <div className={`box ${classVariant} ${classSize}`}>
+    <div {...props} className={`box ${classVariant} ${classSize} ${props.className || ''}`}>
       {props.children}
     </div>
   )

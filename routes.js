@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '/perfil',
-    component: window.CatalogoPage,
+    component: window.PerfilPage,
   },
 ]
 
