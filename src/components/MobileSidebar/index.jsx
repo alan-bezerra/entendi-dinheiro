@@ -1,4 +1,8 @@
-function MobileSidebar({ open, setOpen }) {
+import { Link } from "react-router";
+import { Box } from "../Box";
+import './styles.css';
+
+export function MobileSidebar({ open, setOpen }) {
   function handleSidebarToggle() {
     setOpen((prev) => !prev)
   }
@@ -18,13 +22,13 @@ function MobileSidebar({ open, setOpen }) {
           </Box>
         </button>
 
-        <img src="../assets/logo.svg" alt="Entendi Dinheiro Logo" />
+        <img src="/logo.svg" alt="Entendi Dinheiro Logo" />
       </header>
 
       <nav className="sidebar__nav">
         <Link 
           className={`sidebar__nav__link ${currentPath === "/" ? "sidebar__nav__link--active" : ""}`}
-          href="/" 
+          to="/" 
           onClick={handleSidebarToggle}
         >
           {currentPath === "/" ? (
@@ -44,7 +48,7 @@ function MobileSidebar({ open, setOpen }) {
 
         <Link 
           className={`sidebar__nav__link`}
-          href="#" 
+          to="#" 
         >
           <i className="ph nav__link__icon ph-book-bookmark"></i> 
 
@@ -53,7 +57,7 @@ function MobileSidebar({ open, setOpen }) {
 
         <Link 
           className={`sidebar__nav__link`}
-          href="#" 
+          to="#" 
         >
           <i className="ph nav__link__icon ph-path"></i> 
 
@@ -68,7 +72,7 @@ function MobileSidebar({ open, setOpen }) {
 
         <Link 
           className={`sidebar__nav__link ${currentPath === "/catalogo" ? "sidebar__nav__link--active" : ""}`}
-          href="/catalogo" 
+          to="/catalogo" 
           onClick={handleSidebarToggle}
         >
           {currentPath === "/catalogo" ? (
@@ -84,7 +88,7 @@ function MobileSidebar({ open, setOpen }) {
       <footer className="sidebar__footer">
         <Link 
           className={`sidebar__nav__link`}
-          href="#" 
+          to="#" 
         >
           <i className="ph nav__link__icon ph-question"></i> 
 
@@ -97,7 +101,7 @@ function MobileSidebar({ open, setOpen }) {
 
         <Link 
           className={`sidebar__nav__link sidebar__nav__link--danger`}
-          href="/login" 
+          to="/login" 
         >
           <i className="ph nav__link__icon ph-sign-out"></i> 
 
@@ -108,4 +112,3 @@ function MobileSidebar({ open, setOpen }) {
   )
 }
 
-window.MobileSidebar = MobileSidebar;

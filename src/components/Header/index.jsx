@@ -1,6 +1,13 @@
-function Header({ withoutSidebar = false }) {
-  const [minimized, setMinimized] = React.useState(false);
-  const [open, setOpen] = React.useState(false);
+import { useState } from "react";
+import { Link } from "react-router";
+import { Box } from "../Box";
+import { DesktopSidebar } from "../DesktopSidebar";
+import { MobileSidebar } from "../MobileSidebar";
+import './styles.css';
+
+export function Header({ withoutSidebar = false }) {
+  const [minimized, setMinimized] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -30,7 +37,9 @@ function Header({ withoutSidebar = false }) {
               </Box>
             </button>
 
-            <img src="../assets/logo.svg" alt="Entendi Dinheiro Logo" />
+            <Link to="/" title="Ir para a página inicial" aria-label="Ir para a página inicial">
+              <img src="/logo.svg" alt="Entendi Dinheiro Logo" />
+            </Link>
           </div>
 
             <div className="header__search-container">
@@ -46,9 +55,9 @@ function Header({ withoutSidebar = false }) {
               </Box>
             </button>
 
-            <Link href="/perfil" title="Ir para o perfil" aria-label="Ir para o perfil">
+            <Link to="/perfil" title="Ir para o perfil" aria-label="Ir para o perfil">
               <div className="avatar">
-                <img src="../assets/avatar.png" alt="Avatar" />
+                <img src="/avatar.png" alt="Avatar" />
               </div>
             </Link>
           </div>
@@ -59,5 +68,3 @@ function Header({ withoutSidebar = false }) {
     </>
   )
 }
-
-window.HeaderPrincipal = Header;

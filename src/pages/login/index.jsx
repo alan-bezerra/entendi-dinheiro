@@ -1,8 +1,11 @@
-function LoginPage() {
+import { Link } from "react-router";
+import './styles.css';
+
+export function LoginPage() {
   return (
     <div className="auth-container app-container">
       <div className="auth-logo">
-        <img src="../assets/logo.svg" alt="Entendi Dinheiro Logo" />
+        <img src="/logo.svg" alt="Entendi Dinheiro Logo" />
       </div>
 
       <h2 className="auth-title">Acesse sua conta</h2>
@@ -35,7 +38,7 @@ function LoginPage() {
           <i className="ph ph-currency-circle-dollar"></i>
           <p>
             <span>Não tem uma conta?</span>
-            <Link href="/cadastro">Crie sua conta grátis</Link>
+            <Link to="/cadastro">Crie sua conta grátis</Link>
           </p>
         </div>
 
@@ -46,4 +49,3 @@ function LoginPage() {
   )
 }
 
-window.LoginPage = LoginPage;

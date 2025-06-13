@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -33,41 +33,7 @@
     <title>Entendi Dinheiro</title>
   </head>
   <body>
-    <div id="app"></div>
-
-    <!-- Babel -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- React scripts -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    ></script>
-
-    <!-- App (Components) -->
-    <script type="text/babel" src="components/DesktopSidebar.jsx"></script>
-    <script type="text/babel" src="components/MobileSidebar.jsx"></script>
-    <script type="text/babel" src="components/Box.jsx"></script>
-    <script type="text/babel" src="components/Link.jsx"></script>
-    <script type="text/babel" src="components/Header.jsx"></script>
-    <script type="text/babel" src="components/Carousel.jsx"></script>
-
-    <!-- App (Pages) - Carregar ANTES das rotas -->
-    <script type="text/babel" src="pages/perfil.jsx"></script>
-    <script type="text/babel" src="pages/dashboard.jsx"></script>
-    <script type="text/babel" src="pages/catalogo.jsx"></script>
-    <script type="text/babel" src="pages/login.jsx"></script>
-    <script type="text/babel" src="pages/cadastro.jsx"></script>
-
-    <!-- App (Utils) - Carregar DEPOIS dos componentes -->
-    <script type="text/babel" src="routes.js"></script>
-    <script type="text/babel" src="utils/render-page.js"></script>
-
-    <!-- App (Root) -->
-    <script type="text/babel" src="main.jsx"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

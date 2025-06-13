@@ -1,0 +1,36 @@
+/* Carousel Component Styles */
+.carousel {
+  display: flex;
+  list-style: none;
+  gap: var(--carousel-gap, 16px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0 var(--carousel-padding, 1.5rem);
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  min-width: var(--item-min-width, auto);
+}
+
+.carousel--tight {
+  --carousel-gap: 8px;
+}
+
+.carousel--loose {
+  --carousel-gap: 24px;
+}
+
+.carousel--no-padding {
+  --carousel-padding: 0;
+}

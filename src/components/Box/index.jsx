@@ -1,6 +1,8 @@
+import './styles.css';
+
 // Size = 'default', 'icon'
 // Variant = 'fill', 'outline
-function Box({ size, variant, ...props }) {
+export function Box({ size, variant, ...props }) {
   const currentSize = ['sm', 'default', 'icon'].includes(size) ? size : 'default'; 
   const classSize = `box-${currentSize}`;
   const classVariant = variant ? `box-${variant}` : '';
@@ -11,5 +13,3 @@ function Box({ size, variant, ...props }) {
     </div>
   )
 }
-
-window.Box = Box;

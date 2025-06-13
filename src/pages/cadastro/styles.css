@@ -1,0 +1,108 @@
+/* Cadastro Page Styles */
+.cadastro-box {
+  background-color: var(--color-gray-850);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.cadastro-box .logo {
+  height: 40px;
+  margin-bottom: 24px;
+}
+
+.cadastro-box h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--color-gray-100);
+}
+
+.cadastro-box .social-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-gray-700);
+  color: var(--color-gray-100);
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cadastro-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cadastro-box label {
+  margin: 12px 0 4px;
+  font-size: 0.875rem;
+  color: var(--color-gray-200);
+}
+
+.cadastro-box input {
+  padding: 0.75rem;
+  background-color: var(--color-gray-900);
+  border: 1px solid var(--color-gray-700);
+  border-radius: 8px;
+  color: var(--color-gray-100);
+  font-size: 0.875rem;
+}
+
+.cadastro-box input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.cadastro-box .termos {
+  font-size: 0.75rem;
+  margin: 1rem 0;
+  color: var(--color-gray-400);
+}
+
+.cadastro-box .termos a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.cadastro-box .termos a:hover {
+  text-decoration: underline;
+}
+
+.cadastro-box .submit-btn {
+  background-color: var(--color-primary);
+  color: var(--color-gray-100);
+  border: none;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cadastro-box .submit-btn:hover {
+  background-color: #d94f04;
+}
+
+.cadastro-box .login-link {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-gray-700);
+  padding-top: 1rem;
+}
+
+.cadastro-box .login-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+}

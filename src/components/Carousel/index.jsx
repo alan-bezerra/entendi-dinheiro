@@ -1,3 +1,5 @@
+import './styles.css';
+
 function Carousel({ children, className = "", gap = "16px", padding = "1.5rem" }) {
   return (
     <div 
@@ -23,5 +25,4 @@ function CarouselItem({ children, className = "", minWidth = "auto" }) {
   );
 }
 
-window.Carousel = Carousel;
-window.CarouselItem = CarouselItem;
+export { Carousel, CarouselItem };

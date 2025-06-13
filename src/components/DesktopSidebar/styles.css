@@ -1,0 +1,87 @@
+/* DesktopSidebar Component Styles */
+.desktop-trigger-sidebar {
+  display: none;
+}
+
+.sidebar-desktop__content {
+  display: none;
+  float: left;
+  height: calc(100% - 81px);
+  padding: 0.75rem;
+  border-right: 1px solid var(--color-gray-700);
+  overflow: hidden;
+  width: 274px;
+  transition: width 0.2s ease-in-out;
+}
+
+.sidebar-desktop__content--minimized {
+  width: 72px;
+}
+
+.sidebar-desktop__content .sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-desktop__content .sidebar__nav__link {
+  white-space: nowrap;
+  padding: 0 0.5rem;
+  line-height: 1.6;
+  height: 2.25rem;
+  border-radius: 5px;
+}
+
+.sidebar-desktop__content--minimized .sidebar__nav__link {
+  animation: alignLinks 0s 190ms forwards;
+}
+
+@keyframes alignLinks {
+  from {
+    margin: 0;
+  }
+
+  to {
+    margin: 0 auto;
+  }
+}
+
+.sidebar-desktop__content .sidebar__nav__link span {
+  font-size: 1rem;
+}
+
+.sidebar-desktop__content--minimized .sidebar__nav__link span {
+  display: none;
+}
+
+.sidebar-desktop__content .separator__item {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.sidebar-desktop__content .separator__item span {
+  font-size: 0.75rem;
+}
+
+.sidebar-desktop__content--minimized .separator__item span {
+  display: none;
+}
+
+.sidebar-desktop__content .sidebar__nav__link--active {
+  background-color: var(--color-gray-800);
+}
+
+.sidebar-desktop__content .sidebar__nav__link:hover {
+  background-color: var(--color-gray-800);
+}
+
+@media (min-width: 1024px) {
+  .desktop-trigger-sidebar {
+    display: grid;
+    place-content: center;
+  }
+
+  .sidebar-desktop__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

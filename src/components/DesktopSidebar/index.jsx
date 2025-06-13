@@ -1,4 +1,7 @@
-function DesktopSidebar({ minimized = false }) {
+import { Link } from "react-router";
+import './styles.css';
+
+export function DesktopSidebar({ minimized = false }) {
   const currentPath = window.location.pathname;
 
   return (
@@ -6,7 +9,7 @@ function DesktopSidebar({ minimized = false }) {
       <nav className="sidebar__nav">
         <Link 
           className={`sidebar__nav__link ${currentPath === "/" ? "sidebar__nav__link--active" : ""}`}
-          href="/" 
+          to="/" 
         >
           {currentPath === "/" ? (
             <i className="ph-fill nav__link__icon ph-house"></i> 
@@ -25,7 +28,7 @@ function DesktopSidebar({ minimized = false }) {
 
         <Link 
           className={`sidebar__nav__link`}
-          href="#" 
+          to="#" 
         >
           <i className="ph nav__link__icon ph-book-bookmark"></i> 
 
@@ -34,7 +37,7 @@ function DesktopSidebar({ minimized = false }) {
 
         <Link 
           className={`sidebar__nav__link`}
-          href="#" 
+          to="#" 
         >
           <i className="ph nav__link__icon ph-path"></i> 
 
@@ -49,7 +52,7 @@ function DesktopSidebar({ minimized = false }) {
 
         <Link 
           className={`sidebar__nav__link ${currentPath === "/catalogo" ? "sidebar__nav__link--active" : ""}`}
-          href="/catalogo" 
+          to="/catalogo" 
         >
           {currentPath === "/catalogo" ? (
             <i className="ph-fill nav__link__icon ph-book-open"></i> 
@@ -64,7 +67,7 @@ function DesktopSidebar({ minimized = false }) {
       <footer className="sidebar__footer">
         <Link 
           className={`sidebar__nav__link`}
-          href="#" 
+          to="#" 
         >
           <i className="ph nav__link__icon ph-question"></i> 
 
@@ -77,7 +80,7 @@ function DesktopSidebar({ minimized = false }) {
 
         <Link 
           className={`sidebar__nav__link sidebar__nav__link--danger`}
-          href="/login" 
+          to="/login" 
         >
           <i className="ph nav__link__icon ph-sign-out"></i> 
 
@@ -87,5 +90,3 @@ function DesktopSidebar({ minimized = false }) {
     </aside>
   )
 }
-
-window.DesktopSidebar = DesktopSidebar;

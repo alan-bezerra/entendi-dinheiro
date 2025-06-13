@@ -1,0 +1,125 @@
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  color: inherit;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(218, 82, 20, 0.5);
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-gray-100);
+  background-color: var(--color-gray-900);
+}
+
+/* CSS Variables */
+:root {
+  --color-primary: #DA5214;
+  --color-gray-100: #E1E1E6;
+  --color-gray-200: #C4C4CC;
+  --color-gray-300: #8D8D99;
+  --color-gray-400: #7C7C8A;
+  --color-gray-500: #505059;
+  --color-gray-600: #323238;
+  --color-gray-700: #29292E;
+  --color-gray-800: #202024;
+  --color-gray-850: #1A1A1E;
+  --color-gray-900: #121214;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: calc(1140px + 1.5rem);
+  padding: 0 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-container {
+  height: 100%;
+}
+
+/* Main Layout */
+.main-app-content {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  overflow-y: auto;
+  height: calc(100vh - 81px);
+}
+
+/* Global Typography Classes */
+.title {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--color-gray-200);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+    line-height: 1.6;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}

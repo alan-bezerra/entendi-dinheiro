@@ -1,5 +1,6 @@
-import React from "react";
-function CadastroPage() {
+import './styles.css';
+
+export function CadastroPage() {
   return (
      <div className="cadastro-box">
       <img src="/logo.svg" className="logo" alt="Entendi Dinheiro" />
@@ -35,6 +36,4 @@ function CadastroPage() {
     </div>
   )
 }
-
-window.CadastroPage = CadastroPage;
 
