@@ -1,4 +1,4 @@
-function Header() {
+function Header({ withoutSidebar = false }) {
   const [minimized, setMinimized] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
@@ -55,7 +55,7 @@ function Header() {
         </div>
       </header>
 
-      <DesktopSidebar minimized={minimized} />
+      {!withoutSidebar && <DesktopSidebar minimized={minimized} />}
     </>
   )
 }
