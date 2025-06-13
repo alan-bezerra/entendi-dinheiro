@@ -33,9 +33,15 @@ function Header() {
             <img src="../assets/logo.svg" alt="Entendi Dinheiro Logo" />
           </div>
 
+            <div className="header__search-container">
+              <i className="ph ph-magnifying-glass"></i>
+
+              <input type="search" placeholder="Busque por assuntos e aulas" aria-label="Busque por assuntos e aulas" />
+            </div>
+
           <div className="header__right">
-            <button>
-              <Box variant="outline" size="icon" className="header__search">
+            <button className="header__search-button" aria-label="Pesquisar">
+              <Box variant="outline" size="icon">
                 <i className="ph ph-magnifying-glass"></i>
               </Box>
             </button>
