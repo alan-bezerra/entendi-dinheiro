@@ -22,7 +22,7 @@ button {
   cursor: pointer;
 }
 
-:focus {
+:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(218, 82, 20, 0.5);
 }

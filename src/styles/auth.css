@@ -1,11 +1,27 @@
-/* Login Page Styles */
 .auth-container {
   width: 100%;
+  min-height: 100vh;
   padding: 1.75rem 1.5rem 3rem 1.5rem;
   background-color: var(--color-gray-850);
 }
 
+@media (min-width: 768px) {
+  .auth-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .auth-container .container {
+    max-width: 520px;
+  }
+}
+
+.auth-container .container {
+  padding: 0;
+}
+
 .auth-logo {
+  display: block;
   margin-bottom: 3.0rem;
   width: 100px;
 }
@@ -57,10 +73,17 @@
   background-color: var(--color-gray-600);
 }
 
-#login-form {
+#login-form,
+#cadastro-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .form-label {
@@ -75,7 +98,6 @@
   border-radius: 5px;
   font-size: 1rem;
   color: inherit;
-  margin-bottom: 14px;
 }
 
 .form-input::placeholder {
@@ -84,22 +106,26 @@
 
 .form-input:focus {
   outline: none;
-  border-color: #ff6600;
+  border-color: var(--color-primary);
 }
 
-.login-btn {
-  background-color: #f25c05;
+.login-btn,
+.submit-btn {
+  background-color: var(--color-primary);
   color: inherit;
   border: none;
+  text-align: center;
   padding: 0.75rem 1rem;
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 700;
   border-radius: 5px;
   transition: background 0.2s ease;
+  cursor: pointer;
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.submit-btn:hover {
   background-color: #d94f04;
 }
 
@@ -153,4 +179,20 @@
 .signup-arrow-icon {
   font-size: 1rem;
   color: var(--color-gray-400);
+}
+
+/* Cadastro-specific styles */
+.termos {
+  font-size: 0.875rem;
+  color: var(--color-gray-200);
+  line-height: 1.25rem;
+}
+
+.termos a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.termos a:hover {
+  text-decoration: underline;
 }

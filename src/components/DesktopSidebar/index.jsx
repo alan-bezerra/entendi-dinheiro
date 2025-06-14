@@ -1,24 +1,21 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import './styles.css';
 
 export function DesktopSidebar({ minimized = false }) {
-  const currentPath = window.location.pathname;
-
   return (
     <aside className={`sidebar-desktop__content ${minimized ? "sidebar-desktop__content--minimized" : ""}`}>
       <nav className="sidebar__nav">
-        <Link 
-          className={`sidebar__nav__link ${currentPath === "/" ? "sidebar__nav__link--active" : ""}`}
+        <NavLink 
+          className="sidebar__nav__link"
           to="/" 
         >
-          {currentPath === "/" ? (
-            <i className="ph-fill nav__link__icon ph-house"></i> 
-          ) : (
-            <i className="ph nav__link__icon ph-house"></i> 
+          {({ isActive }) => (
+            <>
+              <i className={`nav__link__icon ${isActive ? 'ph-fill ph-house' : 'ph ph-house'}`}></i>
+              <span>Início</span>
+            </>
           )}
-
-          <span>Início</span>
-        </Link>
+        </NavLink>
 
         <div className="separator__item">
           <span>Progresso</span>
@@ -27,7 +24,7 @@ export function DesktopSidebar({ minimized = false }) {
         </div>
 
         <Link 
-          className={`sidebar__nav__link`}
+          className="sidebar__nav__link"
           to="#" 
         >
           <i className="ph nav__link__icon ph-book-bookmark"></i> 
@@ -36,7 +33,7 @@ export function DesktopSidebar({ minimized = false }) {
         </Link>
 
         <Link 
-          className={`sidebar__nav__link`}
+          className="sidebar__nav__link"
           to="#" 
         >
           <i className="ph nav__link__icon ph-path"></i> 
@@ -50,23 +47,22 @@ export function DesktopSidebar({ minimized = false }) {
           <div className="separator__line"></div>
         </div>
 
-        <Link 
-          className={`sidebar__nav__link ${currentPath === "/catalogo" ? "sidebar__nav__link--active" : ""}`}
+        <NavLink 
+          className="sidebar__nav__link"
           to="/catalogo" 
         >
-          {currentPath === "/catalogo" ? (
-            <i className="ph-fill nav__link__icon ph-book-open"></i> 
-          ) : (
-            <i className="ph nav__link__icon ph-book-open"></i> 
+          {({ isActive }) => (
+            <>
+              <i className={`nav__link__icon ${isActive ? 'ph-fill ph-book-open' : 'ph ph-book-open'}`}></i>
+              <span>Catálogo</span>
+            </>
           )}
-
-          <span>Catálogo</span>
-        </Link>
+        </NavLink>
       </nav>
 
       <footer className="sidebar__footer">
         <Link 
-          className={`sidebar__nav__link`}
+          className="sidebar__nav__link"
           to="#" 
         >
           <i className="ph nav__link__icon ph-question"></i> 
@@ -79,7 +75,7 @@ export function DesktopSidebar({ minimized = false }) {
         </div>
 
         <Link 
-          className={`sidebar__nav__link sidebar__nav__link--danger`}
+          className="sidebar__nav__link sidebar__nav__link--danger"
           to="/login" 
         >
           <i className="ph nav__link__icon ph-sign-out"></i> 

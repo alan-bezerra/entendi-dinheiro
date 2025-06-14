@@ -65,12 +65,17 @@
   display: none;
 }
 
-.sidebar-desktop__content .sidebar__nav__link--active {
+.sidebar-desktop__content .sidebar__nav__link.active {
   background-color: var(--color-gray-800);
 }
 
 .sidebar-desktop__content .sidebar__nav__link:hover {
   background-color: var(--color-gray-800);
+}
+
+.sidebar-desktop__content .sidebar__nav__link.active i {
+  color: var(--color-primary);
+  fill: var(--color-primary);
 }
 
 @media (min-width: 1024px) {
